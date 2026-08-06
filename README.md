@@ -4,93 +4,62 @@
 
 # lunarscan
 
-**FiveM Backdoor Scanner & Server Guard**
-
-Schütze deinen FiveM-Server — scanne Ressourcen auf Backdoors und überwache deinen Live-Server in Echtzeit.
+FiveM Backdoor Scanner. Kostenlos.
 
 [![Website](https://img.shields.io/badge/Website-lunarscan.cc-5865F2?style=for-the-badge)](https://lunarscan.cc/)
 [![Discord](https://img.shields.io/badge/Discord-Community-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/wY2PB2JyZR)
 [![Docs](https://img.shields.io/badge/Docs-Dokumentation-5865F2?style=for-the-badge)](https://lunarscan.cc/docs)
 
+[lunarscan.cc/dashboard/scanner](https://lunarscan.cc/dashboard/scanner)
+
 </div>
 
 ---
 
-## Was ist lunarscan?
+lunarscan checkt FiveM-Resources auf Backdoors und Müll im Code, bevor du sie auf den Server packst. ZIP hochladen, Link reinwerfen oder GitHub-Repo — du kriegst Datei, Zeile, Risiko und den relevanten Code-Schnipsel zurück.
 
-**lunarscan** ist eine Security-Plattform für FiveM. Du lädst eine Resource hoch — oder schützt deinen Server live — und bekommst in Sekunden einen klaren Report zu Backdoors, obfuskiertem Code und verdächtigen Mustern.
+Code wird nicht ausgeführt, nur gelesen. Uploads fliegen nach dem Scan wieder runter.
 
-Kein Rätselraten mehr. Kein blindes Vertrauen in unbekannte Scripts.
-
----
-
-## Zwei Säulen
-
-### 🔍 Scanner
-Lade **ZIP, RAR oder Lua** hoch und erhalte einen detaillierten Sicherheitsreport.
-
-- Backdoor- & Malware-Erkennung
-- Obfuscation- & Cipher-Analyse
-- YARA, Hash-Abgleich & Heuristik
-- Batch-Scans, PDF-Export, Scan-Vergleich
-- GitHub-Watch für Repos
-
-### 🛡️ Lunar Guard
-Ein **FiveM-Script** auf deinem Server — läuft live und meldet direkt ins Dashboard.
-
-- Automatischer Scan nach Server-Restart
-- Hash-Watch & Event-Scanner
-- Browser-Panel im Dashboard
-- Discord-Benachrichtigungen bei Funden
+Account brauchst du (E-Mail, Discord oder Google). Discord muss verknüpft sein. Alles free, kein Abo.
 
 ---
 
-## Für wen?
+## Features
 
-| Zielgruppe | Nutzen |
-|-----------|--------|
-| **Server-Owner** | Ressourcen vor dem Installieren prüfen |
-| **Developer** | Eigene Scripts auf Schwachstellen testen |
-| **Teams** | Gemeinsames Dashboard, Guard auf mehreren Servern |
-| **Partner** | API-Zugang & Leak-Integration |
+- Backdoor- & Malware-Suche (Lua, JS, HTML, CSS, JSON, CFG)
+- Obfuscation / Cipher erkennen
+- YARA, Hashes, Heuristiken
+- ZIP, RAR, Einzeldatei, Download-Link, GitHub
+- Batch — mehrere Pakete auf einmal
+- Scan-Vergleich — zwei Reports nebeneinander
+- Report-Link teilen (öffentlich, ohne Login)
+- Scan-Historie im Dashboard
+- Discord-Bot (Verify, Tickets, Status)
+- Admin-Panel (Patterns, Partner, Audit)
 
----
-
-## Preise (Kurzüberblick)
-
-| | |
-|---|---|
-| **Free** | 5 Scans/Tag, 50 MB Upload |
-| **Scan-Credits** | 1 € = 1 Scan (Pakete: 5 € / 10 € / 25 €) |
-| **Lunar Guard** | Einmalkauf 4,99 € — dauerhaft auf deinem Server |
-
-→ Alle Details: **[lunarscan.cc](https://lunarscan.cc/)**
+**Limits:** 900 MB pro Upload, Scans unbegrenzt (Rate-Limit gegen Spam). Details in [PRODUCT.md](PRODUCT.md).
 
 ---
 
 ## Links
 
-| | |
-|---|---|
-| 🌐 **Website** | [lunarscan.cc](https://lunarscan.cc/) |
-| 📖 **Dokumentation** | [lunarscan.cc/docs](https://lunarscan.cc/docs) |
-| 💬 **Discord** | [discord.gg/wY2PB2JyZR](https://discord.gg/wY2PB2JyZR) |
-| 🔑 **Dashboard** | [lunarscan.cc/dashboard](https://lunarscan.cc/dashboard) |
-| 📡 **Leak API** | [lunarscan.cc/docs/leak-api](https://lunarscan.cc/docs/leak-api) |
-| 🔌 **Public API** | [lunarscan.cc/docs/api](https://lunarscan.cc/docs/api) |
+- Website: [lunarscan.cc](https://lunarscan.cc/)
+- Docs: [lunarscan.cc/docs](https://lunarscan.cc/docs)
+- Discord: [discord.gg/wY2PB2JyZR](https://discord.gg/wY2PB2JyZR)
 
 ---
 
-## Tech (kurz)
+## Server (Windows)
 
-React · Node.js · MySQL · discord.js · Stripe/PayPal · Tauri (Desktop-Analyse-App)
+`START.bat` — startet MySQL, Apache, Backend, Bot (+ Scan-Worker wenn `SCAN_WORKER_MODE=external` in der `.env`)  
+`STOP.bat` — alles aus  
+`STATUS.bat` — kurzer Check  
+`BUILD-FRONTEND.bat` — Frontend bauen  
+
+`.env` vorher aus `backend/.env.example` anlegen.
+
+Mehr Deploy-Zeug: [deploy/README.md](deploy/README.md)
 
 ---
 
-<div align="center">
-
-**[Jetzt scannen →](https://lunarscan.cc/dashboard/scanner)**
-
-© lunarscan — Alle Rechte vorbehalten.
-
-</div>
+© lunarscan
