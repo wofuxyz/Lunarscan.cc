@@ -34,8 +34,6 @@ Account brauchst du (E-Mail, Discord oder Google). Discord muss verknüpft sein.
 - Scan-Vergleich — zwei Reports nebeneinander
 - Report-Link teilen (öffentlich, ohne Login)
 - Scan-Historie im Dashboard
-- Discord-Bot (Verify, Tickets, Status)
-- Admin-Panel (Patterns, Partner, Audit)
 
 **Limits:** 900 MB pro Upload, Scans unbegrenzt (Rate-Limit gegen Spam). Details in [PRODUCT.md](PRODUCT.md).
 
