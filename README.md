@@ -49,17 +49,5 @@ Account brauchst du (E-Mail, Discord oder Google). Discord muss verknüpft sein.
 
 ---
 
-## Server (Windows)
-
-`START.bat` — startet MySQL, Apache, Backend, Bot (+ Scan-Worker wenn `SCAN_WORKER_MODE=external` in der `.env`)  
-`STOP.bat` — alles aus  
-`STATUS.bat` — kurzer Check  
-`BUILD-FRONTEND.bat` — Frontend bauen  
-
-`.env` vorher aus `backend/.env.example` anlegen.
-
-Mehr Deploy-Zeug: [deploy/README.md](deploy/README.md)
-
----
 
 © lunarscan
